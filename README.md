@@ -41,5 +41,12 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
 
+##### github 
+
+git push -u origin2 master
 #### svg图标资源 
 https://undraw.co/search
+
+#### 布署
+`cmd下`
+`set GIT_USER=littley && set USE_SSH=true && yarn deploy`
