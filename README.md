@@ -51,5 +51,4 @@ https://undraw.co/search
 https://simpleicons.org/?q=linux
 
 #### 布署
-`cmd下`
-`set GIT_USER=littley && set USE_SSH=true && yarn deploy`
+` cp -r .\build\* ..\..\mystaticblog\littley.github.io\`
