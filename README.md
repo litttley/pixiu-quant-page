@@ -45,7 +45,10 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 git push -u origin2 master
 #### svg图标资源 
+首页产品介绍svg
 https://undraw.co/search
+系统图标
+https://simpleicons.org/?q=linux
 
 #### 布署
 `cmd下`
