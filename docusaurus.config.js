@@ -21,7 +21,7 @@ const config = {
   projectName: 'littley.github.io', // Usually your repo name.
   deploymentBranch:"gh-pages",
   customFields: {
-    downLoadUrl: 'http://localhost:3000/pixiu/release/pixiu-quant_1.0.0_x64_zh-CN.msi.zip',
+    downLoadUrl: 'https://littley.github.io/pixiu/release/pixiu-quant_1.0.0_x64_zh-CN.msi.zip',
     keywords: [],
   },
  
