@@ -9,7 +9,7 @@ const config = {
   title: '貔貅量化平台',
   tagline: '适用于个人玩家的量化平台',
   url: 'https://littley.github.io',
-  baseUrl: '/',
+  baseUrl: '/pixiu/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
