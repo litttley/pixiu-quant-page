@@ -21,7 +21,7 @@ const config = {
   projectName: 'littley.github.io', // Usually your repo name.
   deploymentBranch:"gh-pages",
   customFields: {
-    downLoadUrl: 'https://objects.githubusercontent.com/github-production-release-asset-2e65be/546040889/fa0cc3b4-7812-4069-ad51-c28942507136?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221006%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221006T085440Z&X-Amz-Expires=300&X-Amz-Signature=e9c2dfb056252a7799f57de432c36ea233b4b2e52565901dbaee2de7d61f3427&X-Amz-SignedHeaders=host&actor_id=39221173&key_id=0&repo_id=546040889&response-content-disposition=attachment%3B%20filename%3Dpixiu-quant_1.0.0_x64_zh-CN.msi.zip&response-content-type=application%2Foctet-stream',
+    downLoadUrl: 'https://github.com/litttley/pixiu/releases/download/v1.0.0/pixiu-quant_1.0.0_x64_zh-CN.msi.zip',
     keywords: [],
   },
  
