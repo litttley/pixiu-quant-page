@@ -6,17 +6,13 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import FaviconWhiteUrl from '@site/static/img/favicon2.png';
 import PlatformWinIcon from '@site/static/img/windows11.svg';
-
+import HandleClip from '@site/src/components/HandleClip'
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import styles from './index.module.css';
 
 function HomepageHeader(prop) {
   const { siteConfig } = useDocusaurusContext();
-  const [isDrop, setIsDrop] = useState(false)
-  const [disx, setDisx] = useState()
-  const [disy, setDisy] = useState()
-  const [moveX, setmoveX] = useState(0)
   const [hanldeLeft, setHanldeLeft] = useState(-16)
-  const handle_ref = useRef();
   const cardOverrideRef = useRef();
 
   useEffect(() => {
@@ -26,42 +22,11 @@ function HomepageHeader(prop) {
 
   }, [])
 
-  window.onmouseup = function () {
-
-    setIsDrop(false);
-  }
-  window.onmousemove = function (event) {
-
-    if (isDrop) {
-
-
-      //pageX 属性返回鼠标指针的水平坐标（相对文档
-      const left = (event.pageX - disx)
-
-      const borderDistanceLeft = left - cardOverrideRef.current.clientWidth + 16;
-
-      if (borderDistanceLeft < 0) {
-        setHanldeLeft(left)
-      }
-
-
-
-    }
+  const updateHanldeLeft = (movex) => {
+    setHanldeLeft(movex)
   }
 
-  const handleOnMouseDown = (event) => {
 
-    setmoveX(moveX)
-
-    const disx = event.pageX - handle_ref.current.offsetLeft
-
-    const disy = event.pageY - handle_ref.current.offsetTop
-
-    setDisx(disx);
-    setDisy(disy);
-
-    setIsDrop(true);
-  }
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -113,25 +78,16 @@ function HomepageHeader(prop) {
               </div>
 
             </div>
+            <BrowserOnly>
+              {() => {
+          
+                return <HandleClip cardOverrideRef={cardOverrideRef} updateParentHanldeLeft={updateHanldeLeft}></HandleClip>
+              }}
 
-            <div className={styles.handle_container}>
-              <div className={styles.handle_bar_container}>
-                <div className={styles.handle_root} ref={handle_ref} onMouseDown={handleOnMouseDown} style={{ left: `${hanldeLeft}px` }}>
+            </BrowserOnly>
 
-                  <div className={styles.handle_line} ></div>
-                  <div className={styles.handle_button} >
-                    <div className={styles.handle_arrow_left}></div>
-                    <div className={styles.handle_arrow_right}></div>
-                    <div></div>
-                    {/* <div style="width: 0px; height: 0px; border-top: 8px solid transparent; border-right: 10px solid; border-bottom: 8px solid transparent;"></div>
-                <div style="width: 0px; height: 0px; border-top: 8px solid transparent; border-right: 10px solid; border-bottom: 8px solid transparent; transform: rotate(180deg);"></div> */}
-                  </div>
-                  <div className={styles.handle_line} ></div>
 
-                </div>
-              </div>
 
-            </div>
 
           </div>
 
